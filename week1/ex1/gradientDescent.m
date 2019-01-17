@@ -17,12 +17,13 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
+    x = X(:,2);
+    h = theta(1) + theta(2) * x;
 
+    theta_one = theta(1) - (alpha/m) * sum(h - y);
+    theta_two = theta(2) - (alpha/m) * sum((h - y) .* x);
 
-
-
-
-
+    theta = [theta_one; theta_two]
     % ============================================================
 
     % Save the cost J in every iteration    
