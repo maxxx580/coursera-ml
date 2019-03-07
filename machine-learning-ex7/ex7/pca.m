@@ -22,7 +22,8 @@ S = zeros(n);
 
 
 
-
+s = 1.0/m .* X' * X;
+[U, S, V] = svd(s);
 
 
 
